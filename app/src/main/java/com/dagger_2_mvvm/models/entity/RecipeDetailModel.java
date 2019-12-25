@@ -13,10 +13,6 @@ public class RecipeDetailModel {
         return meals;
     }
 
-    public void setMeals(List<Meals> meals) {
-        this.meals = meals;
-    }
-
     public static class Meals {
         /**
          * idMeal : 52940
