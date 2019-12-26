@@ -12,7 +12,7 @@ public class RecipeModule {
 
     @UserScope
     @Provides
-    RecipeServiceInterface provideRecipeService(Retrofit retrofit){
+    RecipeServiceInterface provideRecipeService(Retrofit retrofit) {
         return retrofit.create(RecipeServiceInterface.class);
     }
 

@@ -41,12 +41,12 @@ public class RecipeRepository {
             @Override
             public void onResponse(@NonNull Call<CategoryModel> call, @NonNull Response<CategoryModel> response) {
                 hideProgress();
-                Log.e(TAG,call.request().url().toString());
-                Log.e(TAG,new Gson().toJson(response.body()));
+                Log.e(TAG, call.request().url().toString());
+                Log.e(TAG, new Gson().toJson(response.body()));
 
                 CategoryModel categoryModel = response.body();
 
-                if (categoryModel != null && categoryModel.getCategories()!=null){
+                if (categoryModel != null && categoryModel.getCategories() != null) {
 
                     categories = (ArrayList<CategoryModel.Categories>) categoryModel.getCategories();
                     mutableLiveDataCategories.setValue(categories);
@@ -67,7 +67,6 @@ public class RecipeRepository {
     }
 
 
-
     //Recipes list Api call
     private ArrayList<RecipeModel.Recipe> recipes = new ArrayList<>();
     private MutableLiveData<List<RecipeModel.Recipe>> listMutableLiveDataRecipes = new MutableLiveData<>();
@@ -79,8 +78,8 @@ public class RecipeRepository {
             public void onResponse(@NonNull Call<RecipeModel> call, @NonNull Response<RecipeModel> response) {
 
                 hideProgress();
-                Log.e(TAG,call.request().url().toString());
-                Log.e(TAG,new Gson().toJson(response.body()));
+                Log.e(TAG, call.request().url().toString());
+                Log.e(TAG, new Gson().toJson(response.body()));
 
                 RecipeModel recipeModel = response.body();
 
@@ -111,12 +110,12 @@ public class RecipeRepository {
             public void onResponse(@NonNull Call<RecipeDetailModel> call, @NonNull Response<RecipeDetailModel> response) {
 
                 hideProgress();
-                Log.e(TAG,call.request().url().toString());
-                Log.e(TAG,new Gson().toJson(response.body()));
+                Log.e(TAG, call.request().url().toString());
+                Log.e(TAG, new Gson().toJson(response.body()));
 
-                RecipeDetailModel recipeDetailModel= response.body();
+                RecipeDetailModel recipeDetailModel = response.body();
 
-                if (recipeDetailModel != null && recipeDetailModel.getMeals()!=null){
+                if (recipeDetailModel != null && recipeDetailModel.getMeals() != null) {
                     meals = recipeDetailModel.getMeals();
                     listMutableLiveDataMeals.setValue(meals);
                 }
@@ -133,7 +132,7 @@ public class RecipeRepository {
         return listMutableLiveDataMeals;
     }
 
-    public MutableLiveData<Boolean> getMutableProgress(){
+    public MutableLiveData<Boolean> getMutableProgress() {
         return mutableProgress;
     }
 

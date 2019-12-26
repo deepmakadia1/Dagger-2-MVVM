@@ -25,17 +25,17 @@ public class DetailRecipeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Activity activity = this;
-        binding = DataBindingUtil.setContentView(activity,R.layout.activity_detail_recipe);
+        binding = DataBindingUtil.setContentView(activity, R.layout.activity_detail_recipe);
 
         DetailRecipeActivityViewModel detailRecipeActivityViewModel = ViewModelProviders.of(this).get(DetailRecipeActivityViewModel.class);
 
         detailRecipeActivityViewModel.getProgress().observe(this, new Observer<Boolean>() {
             @Override
             public void onChanged(@Nullable Boolean aBoolean) {
-                if (aBoolean!=null && aBoolean){
+                if (aBoolean != null && aBoolean) {
                     binding.scrollView.setVisibility(View.GONE);
                     binding.progress.setVisibility(View.VISIBLE);
-                }else {
+                } else {
                     binding.scrollView.setVisibility(View.VISIBLE);
                     binding.progress.setVisibility(View.GONE);
                 }
@@ -50,7 +50,6 @@ public class DetailRecipeActivity extends AppCompatActivity {
                 }
             }
         });
-
 
 
     }

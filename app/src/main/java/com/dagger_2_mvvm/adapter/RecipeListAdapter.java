@@ -57,7 +57,7 @@ public class RecipeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    context.startActivity(new Intent(context,DetailRecipeActivity.class).putExtra(Constants.MEAL_ID,meals.get(getAdapterPosition()).getIdMeal()));
+                    context.startActivity(new Intent(context, DetailRecipeActivity.class).putExtra(Constants.MEAL_ID, meals.get(getAdapterPosition()).getIdMeal()));
                 }
             });
         }

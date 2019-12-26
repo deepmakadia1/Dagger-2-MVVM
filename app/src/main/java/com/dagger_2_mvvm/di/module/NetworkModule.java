@@ -21,13 +21,13 @@ public class NetworkModule {
 
     @Provides
     @Singleton
-    GsonConverterFactory provideGsonConvertFactory(Gson gson){
+    GsonConverterFactory provideGsonConvertFactory(Gson gson) {
         return GsonConverterFactory.create(gson);
     }
 
     @Provides
     @Singleton
-    Retrofit provideRetrofit(GsonConverterFactory gsonConverterFactory){
+    Retrofit provideRetrofit(GsonConverterFactory gsonConverterFactory) {
         return new Retrofit.Builder()
                 .baseUrl(base_url)
                 .addConverterFactory(gsonConverterFactory)

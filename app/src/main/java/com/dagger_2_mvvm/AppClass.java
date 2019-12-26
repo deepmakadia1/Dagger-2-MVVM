@@ -28,12 +28,10 @@ public class AppClass extends Application {
                 .recipeModule(new RecipeModule())
                 .build();
 
-
-
     }
 
-    public static AppClass getInstance(){
-        if (appClass == null){
+    public static AppClass getInstance() {
+        if (appClass == null) {
             appClass = new AppClass();
         }
         return appClass;

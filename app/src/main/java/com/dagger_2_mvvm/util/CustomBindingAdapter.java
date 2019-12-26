@@ -5,6 +5,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.dagger_2_mvvm.R;
+
 import android.databinding.BindingAdapter;
 
 public class CustomBindingAdapter {
