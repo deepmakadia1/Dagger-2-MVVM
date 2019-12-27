@@ -32,7 +32,6 @@ public class RecipeRepository {
 
     @Inject
     RecipeRepository() {
-        AppClass.getInstance().getServiceComponent().inject(this);
     }
 
     public MutableLiveData<List<CategoryModel.Categories>> getMutableLiveDataCategories() {

@@ -16,10 +16,4 @@ public interface ServiceComponent {
 
     RecipeRepository getRecipeRepository();
 
-    void inject(RecipeRepository recipeRepository);
-
-    void inject(CategoryFragmentViewModel categoryFragmentViewModel);
-
-    void inject(DetailRecipeActivityViewModel detailRecipeActivityViewModel);
-
 }
